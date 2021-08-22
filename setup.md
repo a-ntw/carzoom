@@ -13,6 +13,7 @@ setup on desktop
   * Oracle VM Virtual Box
   * Oracle DB Developer VM 
   * for my case, SQL Developer in the VM work the next day! Guess need to restart the computer to work..
+  * Editor use: Spring Tool Suite 4
 
 #### Database configure
   * username=sumproj, password=sumproj ref from [application.properties](/src/main/resources/application.properties)
@@ -72,3 +73,21 @@ Version 19.3.0.0.0
     * Service name: orcl
   * => Connect
   * Exit
+
+#### Initialize with a employee with role `ADMIN`
+
+* Oracle SQL Developer, add in data `ADMIN`, `MANAGER`, and 'USER` in table `ROLE`. 
+
+* need to temporary edit the following 3 codes to create employee `ADMIN` data.  Im using Spring Tool Suite ro edit
+  * java/carDate/AddSecurity.java - Uncomment line 27 to line 40, and comment off line 47 to line 88
+  * java/carDate.emp/MyUserDetailService.java - commented all, ie not use.
+  * resources/templates/common.html - edit authoize in line 55 to `sec:authorize="hasAnyAuthority('ADMIN','ROLE_ADMIN')">`
+
+* Spring Tool Suite
+  * run the software, learnj . 
+  * Open the browser with 'localhost:8080'. 
+  * login as `ntuc`/`ntuc`. 
+  * Create the Employee profile with role 'ADMIN'. 
+  * After created employee, undo the 3 codes, AddSecurity.java, MyUserDetailService.java & common.html . 
+
+---
