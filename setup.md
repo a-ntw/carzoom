@@ -1,24 +1,25 @@
 setup on desktop
 ---
 
-#### Hardware
+### Hardware
 * os: macOS Big Sur
 * Mac mini (2018)
 * Processor: 3.6 GHz Quad-Core Intel Core i3
 * Memory: 8 GB 2667 MHz DDR4
 * Graphics: Intel UHD Graphics 630 1536 MB
 
-#### Software install
+### Software install
 * Oracle: https://www.oracle.com/database/technologies/databaseappdev-vm.html
   * Oracle VM Virtual Box
   * Oracle DB Developer VM 
-  * for my case, SQL Developer in the VM work the next day! Guess need to restart the computer to work..
+  * for my case, SQL Developer in the VM worked the next day! Guessed need to restart the computer to work..
   * Editor use: Spring Tool Suite 4
+  * Assume this project codes has been cloned to the local. 
 
-#### Database configure
-  * username=sumproj, password=sumproj ref from [application.properties](/src/main/resources/application.properties)
+### Database configure
+* username=sumproj, password=sumproj ref from [application.properties](/src/main/resources/application.properties)
 
-terminal oracle@localhost:~ 
+Creat new Database via VM, terminal oracle@localhost:~ 
 ``` sql
 [oracle@localhost ~]$ 
 [oracle@localhost ~]$ sqlplus sys/oracle as sysdba
@@ -65,7 +66,7 @@ Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Pr
 Version 19.3.0.0.0
 [oracle@localhost ~]$ 
 ```
-* open Oracle SQL Developer in VM
+* open **Oracle SQL Developer** in VM
   * New Connection ( the green plus icon)
     * Name: sumproj
     * Username sumproj
@@ -74,16 +75,19 @@ Version 19.3.0.0.0
   * => Connect
   * Exit
 
-#### Initialize with a employee with role `ADMIN`
+### Initialize with am Employee with role `ADMIN`
+This method used on to initialized employee data on to Heroku.
 
-* Oracle SQL Developer, add in data `ADMIN`, `MANAGER`, and 'USER` in table `ROLE`. 
-
-* need to temporary edit the following 3 codes to create employee `ADMIN` data.  Im using Spring Tool Suite ro edit
+* Need to temporary edit the following 3 codes to create employee `ADMIN` data.  Im using Spring Tool Suite ro edit
   * java/carDate/AddSecurity.java - Uncomment line 27 to line 40, and comment off line 47 to line 88
   * java/carDate.emp/MyUserDetailService.java - commented all, ie not use.
   * resources/templates/common.html - edit authoize in line 55 to `sec:authorize="hasAnyAuthority('ADMIN','ROLE_ADMIN')">`
-
-* Spring Tool Suite
+  
+* Add in **role** data `ADMIN`, `MANAGER`, and 'USER`
+  * create roles from `http://localhost:8080/emp/roleNew`, OR
+  * Oracle SQL Developer, add into table `ROLE` after the initial run that auto-created all tables.
+ 
+* Create Employee 'ADMIN'
   * run the software, learnj . 
   * Open the browser with 'localhost:8080'. 
   * login as `ntuc`/`ntuc`. 
