@@ -2,6 +2,8 @@ git
 
 sqlScript
 
+export as CSV file 
+
 # git
 ``` console 
 antw@Mac-mini SumProj % git remote add origin https://.../learnj.git
@@ -12,11 +14,11 @@ antw@Mac-mini mJCap7 % git clone https://github.com/alvintwng/learnj.git
 antw@Mac-mini mJCap7 % cd learnj
 
 antw@Mac-mini learnj % pwd             
-/Users/antw/ntuc/mJCap7/learnj
+.../ntuc/mJCap7/learnj
 
 antw@Mac-mini learnj % git checkout -b branch4
 antw@Mac-mini learnj % git add .
-antw@Mac-mini learnj % git commit -m "transfer to /Users/antw/ntuc/mJCap7/learnj"
+antw@Mac-mini learnj % git commit -m "transfer to .../ntuc/mJCap7/learnj"
 
 Mar 27, 2021
 antw@Mac-mini learnj % git diff
@@ -60,3 +62,18 @@ Insert into EMPLOYEE (EMAIL, EMP_FULL_NAME, EMPNAME, ISACTIVE, JOB_TITLE, PASSWO
 insert into VEH_STATUS (NAME)  values  ('FREE');
 insert into VEH_STATUS (NAME)  values  ('HIRED');
 ```
+---
+## export as CSV file
+Dataclip results can be downloaded in CSV and JSON formats. To download the results to your local machine as a CSV or JSON file,
+
+Select `Resources` > `Heroku Postgres` > `Dataclips` > select the clip or `Create Dataclip` then
+
+``` sql
+            SELECT
+            *
+            FROM
+            customer
+```
+`Save & Run`
+
+To download as CSV or JSON, click the corresponding button in the results section.
