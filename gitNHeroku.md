@@ -77,3 +77,22 @@ Select `Resources` > `Heroku Postgres` > `Dataclips` > select the clip or `Creat
 `Save & Run`
 
 To download as CSV or JSON, click the corresponding button in the results section.
+
+## import to Oracle DB Developer VM
+* Select the table in the navigation tree.
+* Right click and select 'import data'.
+* Follow the instructions in the wizard.
+
+for instance
+* copy and paste table-data to oracle terminal
+* need to convert false, true to 0, 1. in Vim can use `:%s/false/0/g` for replacement.
+``` console
+            [oracle@localhost ~]$ vi cust_state.csv
+            [oracle@localhost ~]$ cat cust_state.csv
+            custstateid,isdriver,name
+            1,0,Cat A
+            2,0,Cat B
+            3,0,Cat C
+            [oracle@localhost ~]$ 
+```
+* during the selection column, unselect id, for instance custstateid move to left.
