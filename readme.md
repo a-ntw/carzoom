@@ -1,13 +1,14 @@
-## CarZoom
-### JAVA DEVELOPER Summative Capstone Project
+## CarZoom App
+
+youTube: https://youtu.be/U4V75batZk8 :
 
 [![image](img/210518AMinsYoutube.png)](https://youtu.be/U4V75batZk8)
 
 #### This application system:
-- based on Oracle database version 12c  to store all business data,
-- using Java version 11, Spring Boot Framework.
-- accessible with Internet browsers, HerokuApp.
-- utilizing Javascript, Thymeleaf, and Bootstrap for client side presentation, styling, and interaction,
+- based on **Oracle database version 12c**  to store all business data,
+- using **Java version 11**, **Spring Boot Framework**.
+- accessible with Internet browsers, **HerokuApp**, cloud application platform .
+- utilizing `Javascript`, `Thymeleaf`, and `Bootstrap` for client side presentation, styling, and interaction,
 - The system will be accessed only by Employees of the car rental company.
 - Each Employee signs in with an assigned UserName and password.  Each Employee can inquire own personal details as well as change own password.
 - An Employee with ADMIN Role will be initialized in the database and the access given to the system owner. Only Employees assigned ADMIN Role can create, modify Employee records, reset passwords, grant and revoke Employee Roles.  An Employee can be assigned zero, one, or more Roles.
@@ -42,10 +43,8 @@ USER: for front desk who serve customers
 ---
 ### Deployment
 Deployment at  https://carzoom.herokuapp.com/
-* Above mentioned app is using free dynos. If first load fails, please reload
-again.
+* If first load fails, please reload again.
 * Explore with the credential: user/ user (subject to change).
-* Developer explanation, Youtube : https://youtu.be/U4V75batZk8 .
 
 ---
 
@@ -69,18 +68,18 @@ The flow chart show the flow from Hire List, the new booking.
 
 ---
 ### Screen Shots
-Home Page   
+Home Page. Demonstrate the use of *Google Charts*.   
 ![image](img/210505homePage.png)
 
-Select Date   
+Date Selection. Uses of `CDATA` sections.   
 ![image](img/210505selectDate.png)
 
 Hire List   
 ![image](img/210505hireList.png)
 
 ---
-### Git
-Git for tracking changes in any set of files.
+### Git and GitHub
+Git for tracking changes in any set of files, and documentation.
 ![image](img/210525git.png)
 
 ---
