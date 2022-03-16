@@ -16,26 +16,17 @@
 	<div class="parent">
 		<h3 style="text-align: center">
 
-			<span>JAVA DEVELOPER – SUMMATIVE CAPSTONE PROJECT</span>
+			<span>CarZoom App by Alvin Ng T W</span>
 
 		</h3>
 		<hr>
 		<div class="mx-auto" style="width: 560px;">
 
-
-			<h5>Cohort One</h5>
-
-			Project Title <br> 
-			<b>Car Rental Management</b> </br> 
-			Start Date: 9th February, 2021 </br> 
-			End Date: 17th May, 2021
-
-			<hr>
 			<h5>Car Rental Management system</h5>
 			</br> <b>Purpose:</b></br> 
 			This project is being taken up for demonstrating
-			skills acquired during the training. The scope of the project is
-			decided to be as below:
+			skills acquired during the Java Developer training. The scope of the project is
+			decided to be as below:</br>
 			</br> Technical specifications: </br> 
 			The project will be developed
 			using the following tools. Outlined here are the basic requirements
@@ -43,26 +34,25 @@
 			<ol>
 				<li>Tools</li>
 				<ul>
-					<li>Windows or Mac operating system as available</li>
+					<li>Mac operating system</li>
 					<li>STS 4.0 or equivalent</li>
 				</ul>
 				<li>Software & technologies to be used</li>
 				<ul>
-					<li>Oracle database version 12c (or any similar)</li>
+					<li>Oracle database version 12c</li>
 					<li>SQL</li>
-					<li>Java 8 (version can be changed as needed)</li>
+					<li>Java 8 </li>
 					<li>JavaScript</li>
 					<li>CSS</li>
 					<li>HTML 5.0</li>
 					<li>jQuery</li>
 					<li>Thymeleaf</li>
-					<li>Balsamiq or equivalent for wireframing</li>
-					<li>https://erdplus.com/ or any other ER modeling tool, to
+					<li>Balsamiq for wireframing</li>
+					<li>https://erdplus.com/ for ER modeling tool, to
 						determine the dB</li>
 				</ul>
 				<li>Others</li>
-				<li>Upload the final code to a git folder that will be given
-					later.</li>
+				<li>Upload the final code to a git.</li>
 			</ol>
 			<ol>
 				<b>Business Requirements</b>
@@ -114,7 +104,6 @@
 							<li>Email</li>
 							<li>Website</li>
 							<li>Alternate contact details</li>
-							<li>Proof of identity (id captured or an image)</li>
 							<li>Invoice details per customer</li>
 							<li>Invoice status (paid or not)</li>
 						</ul>
@@ -153,10 +142,10 @@
 		</div>
 
 	</div>
-		<div sec:authorize="isAuthenticated()">
-			<b><span sec:authentication="name">Username</span></b> &nbsp;
+<!-- 		<div sec:authorize="isAuthenticated()">
+			<b><span sec:authentication="name">  Username</span></b> &nbsp;
 			<i><span sec:authentication="principal.authorities">Roles</span></i>
-		</div> 
+		</div>  -->
 
 	<div th:replace="common :: footer-note"></div>
 	<div th:replace="common :: footer"></div>
