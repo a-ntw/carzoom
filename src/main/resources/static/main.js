@@ -1,4 +1,4 @@
-/** delete alert, not use??  **/
+// /** delete alert, not use??  **/
 $(document).ready(function() {
 	$('.table .delBtn').on('click', function(event) {
 		event.preventDefault();
