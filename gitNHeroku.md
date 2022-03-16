@@ -32,6 +32,8 @@ antw@Mac-mini learnj % git push -u origin branch4
 
 ```
 # git Heroku
+`heroku login` will open browser to login. 
+But prior to this, I have login to www.heroku.com
 ``` console
 antw@Mac-mini carzoom % git status                         
 On branch master
@@ -40,8 +42,21 @@ antw@Mac-mini carzoom % git add .
 antw@Mac-mini carzoom % git commit -m "Booking system, blocked dates, LocalDateArrayMany.java"
 ...
 antw@Mac-mini carzoom % git push heroku master
-Enumerating objects: 52, done.
-
+ Username for 'https://git.heroku.com': 
+ Password for 'https://git.heroku.com': 
+ remote: !	WARNING:
+ remote: !	Do not authenticate with username and password using git.
+ remote: !	Run `heroku login` to update your credentials, then retry the git command.
+ remote: !	See documentation for details: https://devcenter.heroku.com/articles/git#http-git-authentication
+ fatal: Authentication failed for 'https://git.heroku.com/carzoom.git/'
+antw@Mac-mini carzoom % heroku login
+ heroku: Press any key to open up the browser to login or q to exit: 
+ Opening browser to ...
+ Logging in... done
+ Logged in as a.......g@gmail.com
+antw@Mac-mini carzoom % git push heroku master
+ Enumerating objects: 31, done.
+ ...
 ```
 
 # sqlScript
