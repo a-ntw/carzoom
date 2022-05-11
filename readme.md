@@ -55,7 +55,7 @@ This diagram helped to understand the structure of tables needed to persist the 
 ---
 ### Sequence Diagram - EmpController
 This kind of diagram was especially useful to understand the front controller functionality and the user journey.  
-![image](https://github.com/alvintwng/ntucLH/blob/master/mJSummativeCapStoneProj/210228A-SumProj/SequenceDiagram1.jpg)
+![image](img/SequenceDiagram1.jpg)
 
 ---
 ### Flow Chart
